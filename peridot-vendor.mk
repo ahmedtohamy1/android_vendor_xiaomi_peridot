@@ -1183,11 +1183,13 @@ PRODUCT_PACKAGES += \
     libcneqmiutils \
     libcodec2_soft_ac4dec \
     libcodec2_soft_ddpdec \
+    libcodec2_soft_dolby \
     libcodec2_store_dolby \
     libconfigdb \
     libcpion \
     libcustomva_intf \
     libcv_common \
+    libdapparamstorage-dolby \
     libdapparamstorage \
     libdataitems \
     libdeccfg \
@@ -1337,6 +1339,7 @@ PRODUCT_PACKAGES += \
     libnspscheduler \
     libnspsession \
     libnsptransaction \
+    liboem_specific \
     liboemcrypto \
     libopencl_loader \
     libops \
@@ -1471,6 +1474,7 @@ PRODUCT_PACKAGES += \
     libspl \
     libssc_default_listener \
     libssd \
+    libstagefright_foundation-dolby \
     libstnfc-streset \
     libsubsystem_control \
     libswspatializer_ext \
@@ -1595,6 +1599,7 @@ PRODUCT_PACKAGES += \
     vendor.display.color@1.4 \
     vendor.display.color@1.5 \
     vendor.display.postproc@1.0 \
+    vendor.dolby.hardware.dms@2.0-dolby \
     vendor.dolby.hardware.dms@2.0-impl \
     vendor.dolby.hardware.dms@2.0 \
     vendor.libdpmctmgr \

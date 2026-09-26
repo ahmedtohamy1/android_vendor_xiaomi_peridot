@@ -3886,17 +3886,16 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libhidlbase",
-                "vendor.dolby.hardware.dms@2.0",
+                "vendor.dolby.hardware.dms@2.0-dolby",
                 "libdeccfg",
+                "libstagefright_foundation-dolby",
+                "libcutils",
                 "libbase",
+                "liblog",
                 "libcodec2",
                 "libcodec2_vndk",
                 "libutils",
-                "libcodec2_soft_common",
-                "libcutils",
-                "liblog",
-                "libsfplugin_ccodec_utils",
-                "libstagefright_foundation",
+                "libcodec2_soft_dolby",
                 "libcodec2_store_dolby",
                 "libc++",
                 "libc",
@@ -3923,18 +3922,48 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libhidlbase",
-                "vendor.dolby.hardware.dms@2.0",
+                "vendor.dolby.hardware.dms@2.0-dolby",
                 "libdeccfg",
+                "libstagefright_foundation-dolby",
+                "libcutils",
+                "libbase",
+                "liblog",
+                "libcodec2",
+                "libcodec2_vndk",
+                "libutils",
+                "libcodec2_soft_dolby",
+                "libcodec2_store_dolby",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcodec2_soft_dolby",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libcodec2_soft_dolby.so",
+            ],
+            shared_libs: [
                 "libbase",
                 "libcodec2",
                 "libcodec2_vndk",
                 "libutils",
-                "libcodec2_soft_common",
                 "libcutils",
                 "liblog",
-                "libsfplugin_ccodec_utils",
-                "libstagefright_foundation",
-                "libcodec2_store_dolby",
+                "libstagefright_foundation-dolby",
                 "libc++",
                 "libc",
                 "libm",
@@ -3959,7 +3988,6 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libcodec2_store_dolby.so",
             ],
             shared_libs: [
-                "libdmabufheap",
                 "libbase",
                 "liblog",
                 "libcodec2",
@@ -4085,6 +4113,33 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libdapparamstorage-dolby",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libdapparamstorage-dolby.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libdapparamstorage",
     owner: "xiaomi",
     strip: {
@@ -4154,8 +4209,8 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libhidlbase",
-                "vendor.dolby.hardware.dms@2.0",
-                "libdapparamstorage",
+                "vendor.dolby.hardware.dms@2.0-dolby",
+                "libdapparamstorage-dolby",
                 "libcutils",
                 "libutils",
                 "liblog",
@@ -8461,6 +8516,30 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "liboem_specific",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/liboem_specific.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "liboemcrypto",
     owner: "xiaomi",
     strip: {
@@ -12601,6 +12680,34 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libstagefright_foundation-dolby",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libstagefright_foundation-dolby.so",
+            ],
+            shared_libs: [
+                "libbinder",
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libstnfc-streset",
     owner: "xiaomi",
     strip: {
@@ -16175,6 +16282,34 @@ cc_prebuilt_library_shared {
         android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/vendor.display.postproc@1.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.dolby.hardware.dms@2.0-dolby",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.dolby.hardware.dms@2.0-dolby.so",
             ],
             shared_libs: [
                 "libhidlbase",
